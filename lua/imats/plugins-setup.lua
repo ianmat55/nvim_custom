@@ -71,11 +71,15 @@ return packer.startup(function(use)
     -- transparent editor
     use('xiyaowong/transparent.nvim')
 
-    -- lsp
+    -- manage & instal lsp servers
 	use 'williamboman/mason.nvim'
 	use 'williamboman/mason-lspconfig.nvim'
+
+    -- configures lsp servers
 	use 'neovim/nvim-lspconfig'
-	use 'jose-elias-alvarez/null-ls.nvim'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use { 'glepnir/lspsaga.nvim', branch = 'main' }
+    use 'onsails/lspkind.nvim'
 
     -- don't know why we need this, but docs say we do
     if packer_bootstrap then
