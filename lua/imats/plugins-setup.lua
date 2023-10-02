@@ -67,6 +67,9 @@ return packer.startup(function(use)
     use('L3MON4D3/LuaSnip')
     use('saadparwaiz1/cmp_luasnip')
     use('rafamadriz/friendly-snippets')
+    
+    -- transparent editor
+    use('xiyaowong/transparent.nvim')
 
     -- lsp
 	use 'williamboman/mason.nvim'
