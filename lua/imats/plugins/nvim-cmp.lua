@@ -13,9 +13,6 @@ if not lspkind_status then
     return
 end
 
--- load friendly-snippets
--- require('luasnipo/loaders/from_vscode').lazy_load()
-
 vim.opt.completeopt = 'menu,menuone,noselect'
 
 cmp.setup({

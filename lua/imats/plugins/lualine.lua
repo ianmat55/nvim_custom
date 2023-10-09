@@ -7,10 +7,11 @@ end
 local lualine_nord = require('lualine.themes.nord')
 local lualine_ocean = require('lualine.themes.OceanicNext')
 local lualine_iceberg = require('lualine.themes.iceberg')
+local lualine_everforest = require('lualine.themes.everforest')
 
 lualine.setup({
     options = {
-        theme = lualine_nord
+        theme = lualine_everforest
     }
 })
 
