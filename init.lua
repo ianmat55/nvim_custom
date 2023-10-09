@@ -12,4 +12,5 @@ require('imats.plugins.nvim-tree')
 require('imats.plugins.lualine')
 require('imats.plugins.telescope')
 require('imats.plugins.nvim-cmp')
+require('imats.plugins.lsp.null-ls')
 

@@ -81,6 +81,14 @@ return packer.startup(function(use)
     use { 'glepnir/lspsaga.nvim', branch = 'main' }
     use 'onsails/lspkind.nvim'
 
+    -- formatting & linting
+    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'jayp0521/mason-null-ls.nvim'
+
+    -- auto closing
+    use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+    use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
     -- don't know why we need this, but docs say we do
     if packer_bootstrap then
         require("packer").sync()
