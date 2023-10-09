@@ -19,6 +19,7 @@ mason_lspconfig.setup({
     ensure_installed = {
         'pyright',
         'lua_ls',
+        'tsserver',
     }
 })
 
