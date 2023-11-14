@@ -72,7 +72,7 @@ typescript.setup({
 lspconfig['gopls'].setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    cmd = {'gopls'}
+    cmd = {'gopls'},
     filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' }
 })
 
