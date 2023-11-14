@@ -57,7 +57,7 @@ end
 lspconfig['pyright'].setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    filetypes = {'python'}
+    filetypes = { 'python', 'py' }
 })
 
 -- configure typescript server with plugin
@@ -68,8 +68,16 @@ typescript.setup({
   },
 })
 
+-- configure go
+lspconfig['gopls'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = {'gopls'}
+    filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' }
+})
+
 -- configure lua server (with special settings)
-lspconfig["lua_ls"].setup({
+lspconfig['lua_ls'].setup({
   capabilities = capabilities,
   on_attach = on_attach,
   settings = { -- custom settings for lua
