@@ -1,35 +1,35 @@
-local mason_status, mason = pcall(require, 'mason')
+local mason_status, mason = pcall(require, "mason")
 if not mason_status then
-    return
+	return
 end
 
-local mason_lspconfig_status, mason_lspconfig = pcall(require, 'mason-lspconfig')
+local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not mason_lspconfig_status then
-    return
+	return
 end
 
 mason.setup()
 
-local mason_null_ls_status, mason_null_ls = pcall(require, 'mason_null_ls')
+local mason_null_ls_status, mason_null_ls = pcall(require, "mason_null_ls")
 if not mason_null_ls_status then
-    return
+	return
 end
 
 mason_lspconfig.setup({
-    ensure_installed = {
-        'pyright',
-        'lua_ls',
-        'ts-standard',
-    }
+	ensure_installed = {
+		"pyright",
+		"lua_ls",
+		"ts-standard",
+		"rust-analyzer",
+	},
 })
 
 mason_null_ls.setup({
-    ensure_installed = {
-        'prettier',
-        'stylua',
-        'eslint_d',
-    },
-    -- auto-install configured formatters & linters (with null-ls)
-    automatic_installation = true,
+	ensure_installed = {
+		"prettier",
+		"stylua",
+		"eslint_d",
+	},
+	-- auto-install configured formatters & linters (with null-ls)
+	automatic_installation = true,
 })
-
