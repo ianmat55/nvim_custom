@@ -32,6 +32,7 @@ return packer.startup(function(use)
 	use("shaunsingh/nord.nvim")
 	use("sainnhe/everforest")
 	use("ray-x/starry.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- tmux & split window nav
 	use("christoomey/vim-tmux-navigator") -- tmux & split window nav
@@ -108,7 +109,8 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-	use("github/copilot.vim") -- github copilot integration
+	-- github copilot integration
+	-- use("github/copilot.vim")
 
 	-- don't know why we need this, but docs say we do
 	if packer_bootstrap then
