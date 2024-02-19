@@ -112,6 +112,8 @@ return packer.startup(function(use)
 	-- github copilot integration
 	-- use("github/copilot.vim")
 
+	use("sindrets/diffview.nvim") -- view diffs in a new window
+
 	-- don't know why we need this, but docs say we do
 	if packer_bootstrap then
 		require("packer").sync()

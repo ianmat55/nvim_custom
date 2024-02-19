@@ -16,6 +16,8 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabnext<CR>") -- go to next tab
 keymap.set("n", "<leader>tp", ":tabprevious<CR>") -- close prev tab
 
+keymap.set("n", "<leader>dq", ":DiffviewOpen<CR>") -- open diffview
+
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
