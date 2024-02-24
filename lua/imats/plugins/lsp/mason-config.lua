@@ -21,6 +21,7 @@ mason_lspconfig.setup({
 		"lua_ls",
 		"ts-standard",
 		"rust-analyzer",
+		"clangd",
 	},
 })
 
@@ -29,6 +30,7 @@ mason_null_ls.setup({
 		"prettier",
 		"stylua",
 		"eslint_d",
+		"cpplint",
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,

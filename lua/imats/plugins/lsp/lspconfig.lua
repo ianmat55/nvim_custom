@@ -75,6 +75,21 @@ lspconfig["rust-analyzer"].setup({
 	filetype = { "rust" },
 })
 
+-- Configure C++ server with clangd
+lspconfig["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = {
+		"clangd",
+		"--background-index",
+		"--suggest-missing-includes",
+		"--clang-tidy",
+		"--completion-style=detailed",
+	},
+	filetypes = { "c", "cpp", "objc", "objcpp" },
+	-- Add any additional settings or overrides here
+})
+
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
